@@ -1,5 +1,5 @@
 {
-  "launch_url": "PLACEHOLDER_URL",
+  "launch_url": "https://veli-js.edgeone.app",
   "app_name": "Custom WebView",
   "version": "1.0.0",
   "description": "A production-ready Android WebView wrapper with full hardware access and offline support.",
