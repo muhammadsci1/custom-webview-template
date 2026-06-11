@@ -152,8 +152,6 @@ public class MainActivity extends AppCompatActivity {
 
         // ── Cache Strategy: Load from cache first, fallback to network ──
         settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-        settings.setAppCacheEnabled(true);
-        settings.setAppCachePath(getCacheDir().getAbsolutePath());
 
         // ── Performance &amp; Compatibility ──
         settings.setLoadWithOverviewMode(true);
