@@ -1,0 +1,12 @@
+{
+  "launch_url": "PLACEHOLDER_URL",
+  "app_name": "Custom WebView",
+  "version": "1.0.0",
+  "description": "A production-ready Android WebView wrapper with full hardware access and offline support.",
+  "landing_enabled": true,
+  "landing_delay_ms": 3000,
+  "first_launch_internet_required": true,
+  "cache_mode": "LOAD_CACHE_ELSE_NETWORK",
+  "permissions_auto_grant": true,
+  "file_chooser_enabled": true
+}

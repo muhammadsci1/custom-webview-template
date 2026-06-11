@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Allow all cleartext traffic (http) for development/testing -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <!-- Trust system certificates -->
+            <certificates src="system" />
+            <!-- Optionally trust user-installed certificates (for debugging) -->
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- Domain-specific configuration — override for production domains -->
+    <!--
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">your-production-domain.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+    -->
+</network-security-config>

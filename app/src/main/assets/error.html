@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Connection Required</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            animation: fadeInUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(32px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .icon-wrapper {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 32px;
+        }
+
+        .icon-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .signal-icon {
+            width: 48px;
+            height: 48px;
+            position: relative;
+        }
+
+        .signal-icon .dot {
+            position: absolute;
+            bottom: 0;
+            width: 8px;
+            border-radius: 4px;
+            background: #ff6b6b;
+            animation: pulse 1.8s ease-in-out infinite;
+        }
+
+        .signal-icon .dot:nth-child(1) {
+            left: 0;
+            height: 16px;
+            animation-delay: 0s;
+        }
+        .signal-icon .dot:nth-child(2) {
+            left: 14px;
+            height: 28px;
+            animation-delay: 0.2s;
+        }
+        .signal-icon .dot:nth-child(3) {
+            left: 28px;
+            height: 40px;
+            animation-delay: 0.4s;
+        }
+        .signal-icon .dot:nth-child(4) {
+            left: 42px;
+            height: 48px;
+            animation-delay: 0.6s;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.4;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        .subtitle {
+            color: #e0e0e0;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 28px;
+        }
+
+        .message-box {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 32px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .message-box p {
+            color: #b8c5d6;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .message-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .message-box .highlight {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .steps {
+            text-align: left;
+            margin-top: 8px;
+            padding-left: 4px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .step-text {
+            color: #b8c5d6;
+            font-size: 14px;
+            line-height: 1.5;
+            padding-top: 3px;
+        }
+
+        .step-text strong {
+            color: #ffffff;
+        }
+
+        .retry-button {
+            display: inline-block;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+            text-decoration: none;
+        }
+
+        .retry-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.55);
+        }
+
+        .footer-note {
+            margin-top: 28px;
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 12px;
+            letter-spacing: 0.2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon-wrapper">
+            <div class="icon-circle">
+                <div class="signal-icon">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <h1>Internet Connection Required</h1>
+        <p class="subtitle">This application needs an active internet connection on its first launch to download and initialize essential assets.</p>
+
+        <div class="message-box">
+            <p>Please connect to the internet and restart the app.</p>
+
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <span class="step-text"><strong>Enable Wi-Fi</strong> or <strong>Mobile Data</strong> on your device.</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Ensure you have a <strong>stable connection</strong> with good signal strength.</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-text"><strong>Swipe the app closed</strong> from your recent apps and <strong>reopen</strong> it.</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="retry-button" onclick="location.reload();">Try Again</a>
+
+        <p class="footer-note">Once the initial setup is complete, the app works offline.</p>
+    </div>
+</body>
+</html>

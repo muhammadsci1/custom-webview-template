@@ -1,0 +1,46 @@
+# Built files
+*.apk
+*.aab
+*.ap_
+*.aab_
+
+# Gradle files
+.gradle/
+build/
+*/build/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.nbattrs
+local.properties
+
+# Android
+app/release/
+captures/
+.externalNativeBuild/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Keystore files
+*.jks
+*.keystore
+*.p12
+*.pkcs12
+
+# Signing config
+signing.properties

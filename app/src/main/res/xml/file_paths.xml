@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- External files directory for FileProvider -->
+    <external-files-path
+        name="external_files"
+        path="." />
+
+    <!-- Cache directory -->
+    <cache-path
+        name="cache"
+        path="." />
+
+    <!-- Root external storage (for camera captures) -->
+    <external-path
+        name="external"
+        path="." />
+
+    <!-- Files directory internal -->
+    <files-path
+        name="files"
+        path="." />
+
+    <!-- Root internal storage -->
+    <root-path
+        name="root"
+        path="." />
+</paths>
